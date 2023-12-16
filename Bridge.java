@@ -46,14 +46,14 @@ public class Car extends Thread {
             if (direction.equals("north")) {
                 bridge.enterFromNorth();
                 System.out.println("Car entering from North");
-                // Simulate crossing the bridge
+              
                 sleep(1000);
                 bridge.exitToNorth();
                 System.out.println("Car exiting to North");
             } else if (direction.equals("south")) {
                 bridge.enterFromSouth();
                 System.out.println("Car entering from South");
-                // Simulate crossing the bridge
+                
                 sleep(1000);
                 bridge.exitToSouth();
                 System.out.println("Car exiting to South");
@@ -68,9 +68,8 @@ public class Main {
     public static void main(String[] args) {
         Bridge bridge = new Bridge();
 
-        // Crear y empezar coches
         new Car(bridge, "north").start();
         new Car(bridge, "south").start();
-        // Puedes crear más coches según sea necesario
+   
     }
 }
